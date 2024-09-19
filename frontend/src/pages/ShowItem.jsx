@@ -5,7 +5,7 @@ import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 import { set } from 'mongoose';
 
-const ShowBook = () => {
+const ShowItem = () => {
   const [commodity, setCommodity] = useState({});
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
@@ -66,4 +66,4 @@ const ShowBook = () => {
   )
 }
 
-export default ShowBook
+export default ShowItem

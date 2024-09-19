@@ -5,13 +5,13 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
-const DeleteBook = () => {
+const DeleteItem = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
   const { enqueueSnackbar } = useSnackbar();
 
-  const handleDeleteBook = () => {
+  const handleDeleteItem = () => {
     setLoading(true);
     axios
       .delete(`http://localhost:4444/commodities/${id}`)
@@ -37,7 +37,7 @@ const DeleteBook = () => {
 
         <button
           className='p-4 bg-red-600 text-white m-8 w-full'
-          onClick={handleDeleteBook}
+          onClick={handleDeleteItem}
         >
           Yes, Delete It
         </button>
@@ -46,4 +46,4 @@ const DeleteBook = () => {
   )
 }
 
-export default DeleteBook
+export default DeleteItem
